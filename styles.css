@@ -1,0 +1,466 @@
+/* ==========================================
+   SICHERE ZUFLUCHT - CUSTOM STYLES
+   Optimiert für Design, Lesbarkeit & Mobile
+   ========================================== */
+
+/* === 1. RESET & GRUNDLAGEN === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+  line-height: 1.7;
+  color: #4b5563;
+  overflow-x: hidden;
+}
+
+/* === 2. TYPOGRAFIE === */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  line-height: 1.2;
+  color: #1e1b4b;
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+
+p {
+  margin-bottom: 1rem;
+}
+
+strong {
+  color: #7c3aed;
+  font-weight: 600;
+}
+
+/* === 3. CONTAINER & LAYOUT === */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  padding: 4rem 1.5rem;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 6rem 2rem;
+  }
+}
+
+/* === 4. NAVIGATION === */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(124, 58, 237, 0.1);
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+nav a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #7c3aed;
+}
+
+/* === 5. HERO SECTION === */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    text-align: left;
+  }
+}
+
+/* === 6. CARDS & BOXES === */
+.card {
+  background: white;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(124, 58, 237, 0.15);
+}
+
+.info-box {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* === 7. BUTTONS === */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+  color: white;
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 12px 30px rgba(124, 58, 237, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #7c3aed;
+  border: 2px solid #a855f7;
+}
+
+.btn-secondary:hover {
+  background: rgba(124, 58, 237, 0.1);
+}
+
+/* === 8. STATS / KENNZAHLEN === */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.stat-item {
+  padding: 1.5rem;
+}
+
+.stat-number {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: bold;
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* === 9. GRID LAYOUTS === */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* === 10. FORMS === */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.75rem;
+  background: #faf5ff;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #a855f7;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.1);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  width: auto;
+  margin-top: 0.25rem;
+  accent-color: #7c3aed;
+  cursor: pointer;
+}
+
+.checkbox-wrapper label {
+  margin: 0;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+/* === 11. LISTEN === */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 2rem;
+}
+
+ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0.5rem;
+  color: #a855f7;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+/* === 12. WICHTIG-BOXEN === */
+.wichtig-box {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
+  border-left: 4px solid #7c3aed;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin: 2rem 0;
+}
+
+.wichtig-box strong {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+/* === 13. NOTFALL-SECTION === */
+.emergency-section {
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+  color: white;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  border-radius: 2rem;
+  margin: 3rem 0;
+}
+
+.emergency-section h2,
+.emergency-section p {
+  color: white;
+}
+
+.emergency-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.emergency-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.emergency-number {
+  font-size: 2rem;
+  font-weight: bold;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+/* === 14. FOOTER === */
+footer {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 3rem 1.5rem 2rem;
+  border-top: 1px solid rgba(124, 58, 237, 0.1);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+  color: #7c3aed;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.footer-section a {
+  display: block;
+  color: #6b7280;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #7c3aed;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(124, 58, 237, 0.1);
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* === 15. UTILITY CLASSES === */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+.hidden { display: none; }
+.block { display: block; }
+
+/* === 16. ANIMATIONEN === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* === 17. RESPONSIVE TWEAKS === */
+@media (max-width: 767px) {
+  section {
+    padding: 3rem 1rem;
+  }
+  
+  .card {
+    padding: 1.5rem;
+  }
+  
+  .btn {
+    width: 100%;
+    display: block;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* === 18. PRINT STYLES === */
+@media print {
+  nav,
+  footer,
+  .btn {
+    display: none;
+  }
+}
