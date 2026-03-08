@@ -3,74 +3,147 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Impressum – Sicherezuflucht</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Impressum – Sichere Zuflucht</title>
+  <link rel="stylesheet" href="styles.css" />
   <style>
+    :root {
+      --brand-blue: #7c3aed;
+      --bg-dark: #1e1b4b;
+      --text-light: #e5e7eb;
+      --card-bg: rgba(255,255,255,0.08);
+      --card-border: rgba(255,255,255,0.10);
+    }
+    body {
+      min-height: 100vh;
+      background: linear-gradient(180deg, #faf5ff 0%, #f3e8ff 50%, #ede9fe 100%);
+      color: #4b5563;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+    .hero {
+      min-height: auto;
+      display: block;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .kicker {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 9999px;
+      background: rgba(124,58,237,0.10);
+      color: var(--brand-blue);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+    }
+    .card {
+      background: var(--bg-dark);
+      color: var(--text-light);
+      border: 1px solid var(--card-border);
+      box-shadow: 0 20px 50px rgba(30,27,75,0.18);
+    }
     .legal-block {
-      margin-bottom: 25px;
+      margin-bottom: 28px;
     }
     .legal-block h2 {
       font-size: 1rem;
-      color: var(--brand-blue);
-      margin-bottom: 8px;
+      color: #c4b5fd;
+      margin-bottom: 10px;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
     .legal-text {
-      line-height: 1.6;
-      color: #eee;
+      line-height: 1.7;
+      color: #e5e7eb;
     }
     .disclaimer {
       margin-top: 30px;
-      padding: 15px;
-      background: rgba(255, 255, 255, 0.03);
-      border-radius: 10px;
-      font-size: 0.8rem;
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 18px;
+      background: var(--card-bg);
+      border-radius: 12px;
+      font-size: 0.9rem;
+      border: 1px solid var(--card-border);
+      color: #d1d5db;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 28px;
+      color: #6b7280;
+    }
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .footer-nav a {
+      color: var(--brand-blue);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .footer-nav a:hover {
+      text-decoration: underline;
+    }
+    .fine {
+      color: #6b7280;
+      font-size: 0.875rem;
+    }
+    .btn.btn-ghost {
+      background: transparent;
+      border: 1px solid rgba(196,181,253,0.45);
+      color: #fff;
+    }
+    .btn.btn-ghost:hover {
+      background: rgba(255,255,255,0.08);
     }
   </style>
 </head>
-
-<body data-page="legal">
+<body>
   <main class="wrap">
     <header class="hero">
       <span class="kicker">Transparenz</span>
       <h1>Impressum</h1>
     </header>
 
-    <section class="card animate-fade">
+    <section class="card">
       <div class="legal-block">
         <h2>Angaben gemäß § 5 TMG</h2>
         <div class="legal-text">
-          Klaudia Berger<br>
-          Wilhelm-Pieck-Straße 21,<br>
-         15370 Petershagen/Eggersdorf
+          Sylvia Bergemann<br>
+          Rua do Alto 40 Sendieira, Encarnação<br>
+          2565-292 Mafra<br>
+          Portugal
         </div>
       </div>
 
       <div class="legal-block">
         <h2>Kontakt</h2>
         <div class="legal-text">
-          <span style="color: var(--brand-blue);">E-Mail: info@sicherezufluch.de</span>
+          E-Mail: <a href="mailto:info@sicherezufluch.de" style="color:#c4b5fd;">info@sicherezufluch.de</a>
         </div>
       </div>
 
       <div class="legal-block">
         <h2>Redaktionell verantwortlich</h2>
         <div class="legal-text">
-          Klaudia Berger<br>
-          Wilhelm-Pieck-Straße 21, 
-15370 Petershagen/Eggersdorf<br>
-         
+          Sylvia Bergemann<br>
+          Rua do Alto 40 Sendieira, Encarnação<br>
+          2565-292 Mafra<br>
+          Portugal
         </div>
       </div>
 
-      <button class="btn btn-ghost btn-large" type="button" style="margin-top: 10px;" onclick="history.back()">
-        ZURÜCK ZUM SYSTEM
+      <button class="btn btn-ghost btn-large" type="button" style="margin-top: 10px;" onclick="window.location.href='index.html'">
+        ZURÜCK ZUR STARTSEITE
       </button>
 
-      <div class="disclaimer muted">
-        <strong style="color: #fff; display: block; margin-bottom: 5px;">Haftungsausschluss:</strong>
+      <div class="disclaimer">
+        <strong style="color: #fff; display: block; margin-bottom: 8px;">Haftungsausschluss:</strong>
         Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
       </div>
     </section>
@@ -80,7 +153,7 @@
         <a href="index.html">Startseite</a>
         <a href="datenschutz.html">Datenschutz</a>
       </nav>
-      <p class="fine">© <span id="year"></span> Sicherezuflucht</p>
+      <p class="fine">© <span id="year"></span> Sichere Zuflucht</p>
     </footer>
   </main>
 
