@@ -3,36 +3,109 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Datenschutz – Rebell mit Herz</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Datenschutz – Sichere Zuflucht</title>
+  <link rel="stylesheet" href="styles.css" />
   <style>
+    :root {
+      --brand-blue: #7c3aed;
+      --bg-dark: #1e1b4b;
+      --text-light: #e5e7eb;
+      --card-bg: rgba(255,255,255,0.08);
+      --card-border: rgba(255,255,255,0.10);
+    }
+    body {
+      min-height: 100vh;
+      background: linear-gradient(180deg, #faf5ff 0%, #f3e8ff 50%, #ede9fe 100%);
+      color: #4b5563;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+    .hero {
+      min-height: auto;
+      display: block;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .kicker {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 9999px;
+      background: rgba(124,58,237,0.10);
+      color: var(--brand-blue);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+    }
+    .card {
+      background: var(--bg-dark);
+      color: var(--text-light);
+      border: 1px solid var(--card-border);
+      box-shadow: 0 20px 50px rgba(30,27,75,0.18);
+    }
     .legal-section {
       margin-bottom: 30px;
     }
     .legal-section h2 {
-      font-size: 1.1rem;
-      color: var(--brand-blue);
+      font-size: 1rem;
+      color: #c4b5fd;
       margin-bottom: 10px;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
     .legal-content {
-      line-height: 1.6;
-      border-left: 2px solid rgba(255,255,255,0.05);
+      line-height: 1.7;
+      color: #e5e7eb;
+      border-left: 2px solid rgba(255,255,255,0.10);
       padding-left: 15px;
     }
     .address-block {
       font-style: normal;
       color: #fff;
-      background: rgba(255,255,255,0.03);
+      background: var(--card-bg);
       padding: 15px;
-      border-radius: 8px;
+      border-radius: 10px;
       display: block;
       margin-top: 10px;
+      border: 1px solid var(--card-border);
+    }
+    .footer {
+      text-align: center;
+      margin-top: 28px;
+      color: #6b7280;
+    }
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .footer-nav a {
+      color: var(--brand-blue);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .footer-nav a:hover {
+      text-decoration: underline;
+    }
+    .fine {
+      color: #6b7280;
+      font-size: 0.875rem;
+    }
+    .btn.btn-ghost {
+      background: transparent;
+      border: 1px solid rgba(196,181,253,0.45);
+      color: #fff;
+    }
+    .btn.btn-ghost:hover {
+      background: rgba(255,255,255,0.08);
     }
   </style>
 </head>
-
 <body>
   <main class="wrap">
     <header class="hero">
@@ -40,42 +113,57 @@
       <h1>Datenschutz</h1>
     </header>
 
-    <section class="card animate-fade">
+    <section class="card">
       <div class="legal-section">
         <h2>1. Datenschutz auf einen Blick</h2>
         <div class="legal-content">
-          <p class="muted">
-            Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
-          </p>
+          <p>Die Betreiberin dieser Website nimmt den Schutz Ihrer persönlichen Daten sehr ernst. Personenbezogene Daten werden vertraulich und entsprechend der geltenden Datenschutzvorschriften behandelt.</p>
         </div>
       </div>
 
       <div class="legal-section">
-        <h2>2. Datenerfassung</h2>
+        <h2>2. Hosting</h2>
         <div class="legal-content">
-          <p class="muted">
-            <strong>Hosting:</strong> Diese Website wird über GitHub Pages gehostet. GitHub kann Server-Log-Files erfassen (IP-Adresse, Datum, Uhrzeit des Zugriffs).
-          </p>
-          <p class="muted" style="margin-top: 10px;">
-            <strong>Externe Links:</strong> Wir verlinken auf Ko-fi. Bei Nutzung dieser Links verlassen Sie unseren Verantwortungsbereich. Ko-fi erhebt eigene Daten zur Abwicklung von Zahlungen und Interaktionen.
-          </p>
+          <p>Diese Website wird über GitHub Pages gehostet. Dabei können technisch notwendige Server-Log-Daten wie IP-Adresse, Datum, Uhrzeit und angeforderte Datei verarbeitet werden.</p>
         </div>
       </div>
 
       <div class="legal-section">
-        <h2>3. Verantwortliche Stelle</h2>
+        <h2>3. Kontaktaufnahme</h2>
+        <div class="legal-content">
+          <p>Wenn Sie per E-Mail oder über ein Kontaktformular Kontakt aufnehmen, werden die von Ihnen übermittelten Angaben ausschließlich zur Bearbeitung Ihrer Anfrage verwendet.</p>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>4. Externe Links</h2>
+        <div class="legal-content">
+          <p>Diese Website kann Links zu externen Seiten enthalten. Beim Aufruf dieser Seiten gelten ausschließlich die Datenschutzbestimmungen der jeweiligen Anbieter.</p>
+        </div>
+      </div>
+
+      <div class="legal-section">
+        <h2>5. Verantwortliche Stelle</h2>
         <div class="legal-content">
           <address class="address-block">
-            <strong>Emilio Allegro</strong><br>
-            Kaiserstrasse 6a<br>
-            66787 Wadgassen<br>
-            <span style="color: var(--brand-blue);">E-Mail: rebellmitherz@gmail.com</span>
+            <strong>Sylvia Bergemann</strong><br>
+            Rua do Alto 40 Sendieira, Encarnação<br>
+            2565-292 Mafra<br>
+            Portugal<br>
+            E-Mail: <a href="mailto:info@sicherezufluch.de" style="color:#c4b5fd;">info@sicherezufluch.de</a>
           </address>
         </div>
       </div>
 
-      <button class="btn btn-ghost btn-large" style="margin-top: 10px;" onclick="history.back()">
-        ZURÜCK ZUR AUSWAHL
+      <div class="legal-section">
+        <h2>6. Ihre Rechte</h2>
+        <div class="legal-content">
+          <p>Sie haben im Rahmen der gesetzlichen Vorschriften das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung sowie Widerspruch gegen die Verarbeitung Ihrer personenbezogenen Daten.</p>
+        </div>
+      </div>
+
+      <button class="btn btn-ghost btn-large" style="margin-top: 10px;" onclick="window.location.href='index.html'">
+        ZURÜCK ZUR STARTSEITE
       </button>
     </section>
 
@@ -84,7 +172,7 @@
         <a href="index.html">Startseite</a>
         <a href="impressum.html">Impressum</a>
       </nav>
-      <p class="fine">© <span id="year"></span> Sicherezufluch</p>
+      <p class="fine">© <span id="year"></span> Sichere Zuflucht</p>
     </footer>
   </main>
 
